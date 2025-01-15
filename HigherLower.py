@@ -21,8 +21,11 @@ def game():
         if player_choice == winner:
             print("Correct!")
             score += 1
+            first_animal = second_animal
+            print(f"Your current score is: {score}")
         else:
-            print(f"Nope! Your score is: {score}")
+            print(f"Nope!")
             break
+    print(f"Your final score is: {score}")
 
 game()
