@@ -1,7 +1,6 @@
 from random import shuffle
 from ascii_art import logo
 from game_data import data
-from animal_weights_dictionary import animal_weights_dict
 
 def print_logo():
     print("\n" * 20)
