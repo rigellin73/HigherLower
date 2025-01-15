@@ -1,5 +1,16 @@
 animal_weights_dict = {
     "Alligator" : 500,
     "Badger" : 12,
-    "Bear" : 363,
+    "Bear" : 300,
+    "Beaver" : 30,
+    "Bison" : 800,
+    "Bobcat" : 13,
+    "Buffalo" : 700,
+    "Camel" : 500,
+    "Caracal" : 15,
+    "Cat" : 5,
+    "Cheetah" : 50,
+    "Crocodile" : 600,
+    "Deer" : 60,
+    "Dog" : 25,
 }
