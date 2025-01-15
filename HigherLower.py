@@ -17,6 +17,9 @@ def print_result(has_won, final_score):
         print("Sorry, that's wrong.")
     print(f"Your final score is: {final_score}")
 
+def get_output_str(item):
+    return f"{item['name']}, {item['description']}, from {item['country']}"
+
 def game():
     print_logo()
     score = 0
@@ -29,8 +32,8 @@ def game():
         if first_item['follower_count'] > second_item['follower_count']:
             winner = "A"
 
-        print(f"Compare A: {first_item['name']}, {first_item['description']}, from {first_item['country']}")
-        print(f"Against B: {second_item['name']}, {second_item['description']}, from {second_item['country']}")
+        print(f"Compare A: {get_output_str(first_item)}")
+        print(f"Against B: {get_output_str(second_item)}")
         player_choice = input("Who has more followers? Type 'A' or 'B': ")
         if player_choice == winner:
             score += 1
