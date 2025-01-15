@@ -6,7 +6,7 @@ def print_logo():
     print("\n" * 20)
     print(logo)
 
-def print_intermediate_result(current_score):
+def print_current_result(current_score):
     print_logo()
     print(f"You right! Your current score is: {current_score}")
 
@@ -40,7 +40,7 @@ def game():
         if answer_is_correct(guess, first_item['follower_count'], second_item['follower_count']):
             score += 1
             first_item = second_item
-            print_intermediate_result(score)
+            print_current_result(score)
         else:
             player_won = False
             break
