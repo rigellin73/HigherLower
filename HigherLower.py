@@ -1,5 +1,6 @@
 from random import shuffle
 from ascii_art import logo
+from game_data import data
 from animal_weights_dictionary import animal_weights_dict
 
 def print_logo():
@@ -20,22 +21,21 @@ def print_result(has_won, final_score):
 def game():
     print_logo()
     score = 0
-    animals = list(animal_weights_dict.keys())
-    shuffle(animals)
-    first_animal = animals.pop()
+    shuffle(data)
+    first_item = data.pop()
     player_won = True
-    while animals:
-        second_animal = animals.pop()
+    while data:
+        second_item = data.pop()
         winner = "B"
-        if animal_weights_dict[first_animal] > animal_weights_dict[second_animal]:
+        if first_item['follower_count'] > second_item['follower_count']:
             winner = "A"
 
-        print(f"Compare A: {first_animal}")
-        print(f"Against B: {second_animal}")
-        player_choice = input("Who is heavier? Type 'A' or 'B': ")
+        print(f"Compare A: {first_item['name']}, {first_item['description']}, from {first_item['country']}")
+        print(f"Against B: {second_item['name']}, {second_item['description']}, from {second_item['country']}")
+        player_choice = input("Who has more followers? Type 'A' or 'B': ")
         if player_choice == winner:
             score += 1
-            first_animal = second_animal
+            first_item = second_item
             print_intermediate_result(score)
         else:
             player_won = False
